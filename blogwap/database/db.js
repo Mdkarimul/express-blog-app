@@ -5,8 +5,7 @@ const option = {
     useUnfieldTopology:true,
     useCreateIndex:true
 };
-
-mongo.connect("mongodb://localhost:27017/blogwap");
+ mongo.connect("mongodb://localhost:27017/blogwap",{ family: 4 });
 
 const createData =async (data)=>{
 const collection =   new blogSchema(data);
@@ -21,7 +20,7 @@ const getAll = async ()=>{
 
 const getByQuery =async (query)=>{
     const data = await blogSchema.find(query);
-   return data;
+    return data;
 }
 
 module.exports = {

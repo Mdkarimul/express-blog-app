@@ -2,7 +2,6 @@ const express = require("express");
 const server = express();
 server.listen(8080);
 
-
 const cors = require('./middleware/cors.middleware');
 const body_parser  = require("./middleware/body_parser.middleware");
 const multer = require("./middleware/multer.middleware");

@@ -11,7 +11,6 @@ const createBlog =async (request,response)=>{
   }
    const data = request.body;
    const fileInfo = request.file;
-   console.log(fileInfo);
    data['image'] = fileInfo.destination+"/"+fileInfo.filename;
    try {
    const data_res = await database.createData(data);
@@ -45,7 +44,6 @@ const createBlog =async (request,response)=>{
       });
     }
    }
- 
 }
 
 const getAllBlogs =async (request,response)=>{
